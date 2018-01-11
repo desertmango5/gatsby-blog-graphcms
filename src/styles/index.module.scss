@@ -1,0 +1,63 @@
+.post {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  font: {
+    size: 2rem;
+  }
+}
+
+.date {
+  font: {
+    size: 0.75rem;
+  }
+  color: #ccc;
+  margin: {
+    bottom: 0;
+    top: 3rem;
+  }
+}
+
+.author {
+  font: {
+    size: 0.70rem;
+    weight: 100;
+  }
+  color: #ccc;
+  margin: {
+    top: 1rem;
+  }
+}
+
+.authorPic {
+  width: 30px;
+  margin: {
+    left: 10px;
+  }
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #aaa;
+
+}
+
+.name {
+  font: {
+    size: 0.90rem;
+  }
+  color: #aaa;
+}
+
+.contentImg {
+  box-shadow: 3px 3px 6px #aaa;
+  border-radius: 5px;
+}
+
+.content {
+  margin: {
+    bottom: 2rem;
+  }
+}
