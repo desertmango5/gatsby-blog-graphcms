@@ -11,6 +11,7 @@ const Header = (props) => {
       style={{
         background: 'crimson',
         marginBottom: '1.45rem',
+        boxShadow: '0 3px 5px #aaa',
       }}
     >
       <div
@@ -36,6 +37,22 @@ const Header = (props) => {
           >
             {props.byline}
           </h4>
+      </div>
+      <div 
+        style={{ display: 'flex' }}>
+        <Link
+          to="/"
+          style={{ color: '#ccc', marginLeft: '1.5rem', marginBottom: '1rem' }}
+        >
+        Home
+        </Link>
+
+        <Link
+          to="/authors/"
+          style={{ color: '#ccc', marginLeft: '1.5rem', marginBottom: '1rem' }}
+        >
+        Authors
+        </Link>
       </div>
     </div>
   )

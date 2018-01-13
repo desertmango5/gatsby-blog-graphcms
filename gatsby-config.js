@@ -42,6 +42,20 @@ module.exports = {
                   url
                 }
               }
+            },
+            allAuthors {
+              id
+              name
+              bio
+              image {
+                id
+                url
+              }
+              posts {
+                id
+                title
+                slug
+              }
             }
           }`
         }

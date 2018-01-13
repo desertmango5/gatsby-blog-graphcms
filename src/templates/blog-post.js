@@ -34,6 +34,15 @@ export default ({ data }) => {
           <p key={shortid.generate()} className={s.tag}>{tag}</p>
         ))}
       </div>
+      <div className={s.postNavigation}>
+        {/* TODO
+            1. add href for previous/next
+            2. use post.title in place of 'previous'/'next'
+            3. only show is there IS a previous or next post    
+         */}
+        <a href="" className={s.previous}>← Previous</a>
+        <a href="" className={s.next}>Next →</a>
+      </div>
     </div>
   )
 }
