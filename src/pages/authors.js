@@ -16,9 +16,6 @@ const Authors =  ({ data }) => {
           />
           <h3 className={s.name}>{author.node.name}</h3>
           <p className={s.bio}>{author.node.bio}</p>
-          {author.node.posts.map(post => (
-            <p>{post.title}</p>
-          ))}
         </div>
       ))}  
     </div>
