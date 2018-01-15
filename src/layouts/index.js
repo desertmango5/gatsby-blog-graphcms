@@ -39,7 +39,7 @@ const Header = (props) => {
           </h4>
       </div>
       <div 
-        style={{ display: 'flex' }}>
+        style={{ display: 'flex', justifyContent: 'center' }}>
         <Link
           to="/"
           style={{ color: '#ccc', marginLeft: '1.5rem', marginBottom: '1rem' }}

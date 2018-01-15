@@ -17,7 +17,7 @@ const Authors =  ({ data }) => {
           <h3 className={s.name}>{author.node.name}</h3>
           <p className={s.bio}>{author.node.bio}</p>
         </div>
-      ))}  
+      ))} 
     </div>
   )
 }

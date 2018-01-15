@@ -1,5 +1,9 @@
 const path = require('path');
 const slash = require('slash');
+const {
+  createPaginationPages,
+  createLinkedPages
+} = require('gatsby-pagination');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
@@ -9,6 +13,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     graphql(`
       {
         allPosts {
+          totalCount
           edges {
             node {
               title
@@ -37,14 +42,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         if (result.errors) {
           console.log(result.errors)
         }
-        result.data.allPosts.edges.map(({ node }) => {
-          createPage({
-            path: `/post/${node.slug}`,
-            component: slash(postTemplate),
+
+        // creates Index page
+        createPaginationPages({
+          createPage,
+          edges: result.data.allPosts.edges,
+          component: slash(postTemplate),
+          limit: 10
+        })
+
+        // creates page for each blog post
+        createLinkedPages({
+          createPage,
+          edges: result.data.allPosts.edges,
+          component: slash(postTemplate),
+          edgeParser: edge => ({
+            path: `/post/${edge.node.slug}`,
             context: {
-              slug: node.slug,
+              slug: edge.node.slug,
+              info: edge.node,
             },
-          })
+          }),
+          circular: true
         })
       resolve()
     })

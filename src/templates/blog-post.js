@@ -4,8 +4,9 @@ import Link from 'gatsby-link'
 import shortid from 'shortid'
 import s from './blog-post.module.scss'
 
-export default ({ data }) => {
+export default ({ data, pathContext }) => {
   const post = data.posts
+  const { prev, next, total } = pathContext
   return (
     <div key={post.id} className={s.post}>
       <p className={s.date}>{post.dateandTime}</p>
@@ -40,15 +41,15 @@ export default ({ data }) => {
             2. use post.title in place of 'previous'/'next'
             3. only show is there IS a previous or next post    
          */}
-        <a href="" className={s.previous}>← Previous</a>
-        <a href="" className={s.next}>Next →</a>
+        <a href={prev} className={s.previous}>← Previous</a>
+        <a href={next} className={s.next}>Next →</a>
       </div>
     </div>
   )
 }
 
-export const query = graphql`
-  query PostQuery($slug: String!) {
+export const postQuery = graphql`
+  query BlogPostBySlug($slug: String!, $next: String) {
     posts(slug: { eq: $slug }) {
       title
       content
@@ -66,5 +67,29 @@ export const query = graphql`
         }
       }
     }
+    next: posts( slug: { eq: $next }) {
+      title
+      slug
+    }
   }
 `
+
+// query PostQuery($slug: String!) {
+  // posts(slug: { eq: $slug }) {
+  //   title
+  //   content
+  //   slug
+  //   dateandTime(formatString: "DD MMM YYYY")
+  //   id
+  //   tags
+  //   image {
+  //     url
+  //   }
+  //   authors {
+  //     name
+  //     image {
+  //       url
+  //     }
+  //   }
+  // }
+// }

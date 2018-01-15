@@ -1,3 +1,5 @@
+require('dotenv').config({ path: './.env.development' })
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby GraphCMS Blog`,
@@ -21,7 +23,7 @@ module.exports = {
       {
         resolve: `gatsby-source-graphcms`,
         options: {
-          endpoint: `https://api.graphcms.com/simple/v1/cjc8ur3k41gkn0189owdwc7oo`,
+          endpoint: process.env.GATSBY_API_URL,
           query: `{
             allPosts {
               title

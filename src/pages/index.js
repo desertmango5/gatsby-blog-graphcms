@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Markdown from 'react-markdown'
 import s from '../styles/index.module.scss'
 
-const IndexPage = ({ data, context }) => {
+const IndexPage = ({ data, pathContext }) => {
   return (
     <div>
       {data.allPosts.edges.map(post => (
