@@ -1,0 +1,21 @@
+.postNavigation {
+  display: flex;
+  justify-content: space-around;
+  margin: {
+    bottom: 4rem;
+  }
+}
+
+.readNext {
+}
+
+.readNext__div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.readNext__title {
+  flex: 1;
+}
