@@ -9,7 +9,7 @@ const IndexPage = ({ data, pathContext }) => {
       {data.allPosts.edges.map(post => (
         <div key={post.node.id} className={s.post}>
           <p className={s.date}>{post.node.dateandTime}</p>
-          <Link to={`/post/${post.node.slug}`} className={s.link}>
+          <Link to={post.node.slug} className={s.link}>
             <h3 className={s.title}>{post.node.title}</h3>
           </Link>
           {post.node.authors.map(author => (

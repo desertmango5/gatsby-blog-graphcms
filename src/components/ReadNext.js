@@ -6,20 +6,18 @@ import s from '../styles/readnext.module.scss'
 const ReadNextPost = props => {
   const { path, title, image } = props
   const styles = { 
-    backgroundImage: `url(${image}`
+    backgroundImage: `url(${image})`,
   }
   return (
-    <div>
-      <Link 
-        to={path} 
-        style={styles}
-        className={s.readNext}
-      >
-        <div className={s.readNext__div}>
-          <h4>{title}</h4> 
-        </div>
-      </Link>
-    </div>
+    <Link 
+      style={styles}
+      to={path} 
+      className={s.readNext}
+    >
+      <div className={s.readNext__div}>
+        <h4 className={s.readNext__title}>{title}</h4> 
+      </div>
+    </Link>
   )
 }
 
