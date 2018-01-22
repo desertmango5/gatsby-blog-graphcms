@@ -63,8 +63,8 @@ const TemplateWrapper = ({ children, data }) => (
     <Helmet
       title="Gatsby GraphCMS"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'A practice Gatsby blog powered by GraphCMS' },
+        { name: 'keywords', content: 'gatsby, gatsbyjs, graphcms, graphql, blog' },
       ]}
     />
     <Header 

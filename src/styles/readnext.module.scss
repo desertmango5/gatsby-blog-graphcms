@@ -1,11 +1,3 @@
-.postNavigation {
-  display: flex;
-  justify-content: space-around;
-  margin: {
-    bottom: 4rem;
-  }
-}
-
 .readNext {
   display: flex;
   flex-grow: 1;
@@ -15,7 +7,6 @@
   background-size: cover;
   overflow: hidden;
   height: 300px;
-  text-align: center;
   opacity: 0.5;
 }
 
@@ -25,18 +16,20 @@
 
 .readNext__div {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 .readNext__title {
-  margin-right: 1rem;
-  margin-left: 1rem;
   padding: 1rem;
   font-size: 30px;
   color: white;
   background-color: rgba(0,0,0,0.3);
   border-radius: 0.5rem;
-  text-align: center;
+}
+
+.postNavigation {
+  display: flex;
 }
