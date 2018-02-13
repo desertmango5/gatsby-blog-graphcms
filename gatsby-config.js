@@ -35,6 +35,8 @@ module.exports = {
               image {
                 fileName
                 handle
+                height
+                width
                 url
               }
               authors {
@@ -58,6 +60,14 @@ module.exports = {
                 title
                 slug
               }
+            },
+            allAssets {
+              id
+              handle
+              height
+              width
+              url
+              fileName
             }
           }`
         }

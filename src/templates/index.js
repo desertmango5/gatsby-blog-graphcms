@@ -5,7 +5,7 @@ import s from '../styles/index.module.scss'
 
 const IndexPage = ({ data, pathContext }) => {
   return (
-    <div>
+    <div className={s.body}>
       {data.allPosts.edges.map(post => (
         <div key={post.node.id} className={s.post}>
           <p className={s.date}>{post.node.dateandTime}</p>

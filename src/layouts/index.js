@@ -12,6 +12,11 @@ const Header = (props) => {
         background: 'crimson',
         marginBottom: '1.45rem',
         boxShadow: '0 3px 5px #aaa',
+        position: 'fixed',
+        width: '100%',
+        top: 0,
+        left: 0,
+        zIndex: 1000,
       }}
     >
       <div

@@ -3,7 +3,7 @@ import s from '../styles/authors.module.scss'
 
 const Authors =  ({ data }) => {
   return (
-    <div>
+    <div className={s.body}>
       {data.allAuthors.edges.map(author => (
         <div
           key={author.node.id}
